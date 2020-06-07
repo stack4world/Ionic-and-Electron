@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-list>
+            <ion-item class="user-item" *ngFor="let user of users">
+                <ion-thumbnail slot="start" class="user-avata">
+                  <img src="{{ user.avatar }}" alt=""/>
+                </ion-thumbnail>
+                <ion-label style="display: flex; flex-direction: column;">
+                  <span class="user">{{user.first_name}} {{user.last_name}}</span>
+                  <span class="news-subtitle">{{ user.email }}</span>
+                </ion-label>
+                <!-- <div class="time-box">
+                    {{ user.email }}
+                </div> -->
+            </ion-item>                
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>
